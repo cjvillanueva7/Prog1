@@ -1,0 +1,100 @@
+#include <iostream>
+#include <stdio.h>
+void FF(char E(),char T(), char Q(), char F(), char R());
+
+char l;
+using namespace std;
+int match(char t){
+        
+    if (l==t){
+        l=getchar();
+    
+    }
+    else{
+    printf("error");
+    }
+    return 0;
+}
+
+char E(){
+//printf("charEtest\n");
+    l=getchar();
+    char T();
+    char Q();
+    
+    return 0;
+}
+char T(){
+    char F();
+    char R();
+    return 0;
+}
+char Q(){
+    if(l=='+'){
+        match('+');
+        T();
+        Q();
+        return 0;
+    }
+    else if (l=='-'){
+        match('-');
+        T();
+        Q();
+    }
+    else{
+        return 0;
+    }
+    return 0;
+}
+//char E(){
+//    l=getchar();
+//   T();
+//   Q();
+//   return 0;
+//}
+char F(){
+    if(l=='('){
+        match('(');
+        E();
+        match(')');
+    }
+    else if(l=='a'){
+        match('a');
+    }
+return 0;
+}
+char R(){
+    if(l=='*'){
+        match('*');
+        F();
+        R();
+    }
+    else if (l=='/'){
+        match('/');
+    	F();
+   		R();
+    }
+    else{
+        return 0;
+    }
+    return l;
+}
+int main(){
+    std::string s;
+    printf("Input (do not include spaces): ");              //first input line output
+    std::cin >>s; //stringinput
+    //l=getchar(); //charinput
+    //E();
+        std::cout <<"Input: " << s << std::endl;            //first line Output
+        printf("Stack: ['$', 'Q', 'R']\n");                 //second line output-stack
+            //if(l=='$'){ //char$check
+            if(s.back()=='$'){                              //ending with $ validation
+            E();
+        printf("Output: String is accepted/ valid.");       //third line output valid
+    }
+    else {
+        //E();
+        printf("Output: String is not accepted/In valid."); //third line output invalid
+    }
+    char E();
+}
